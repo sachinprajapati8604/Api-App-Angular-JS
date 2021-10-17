@@ -8,7 +8,7 @@ import { MyserviceService } from '../myservice.service';
   styleUrls: ['./photo-gallery.component.css']
 })
 export class PhotoGalleryComponent implements OnInit {
-
+  searchKey="";
   photoData:any;
   showLoader=true;
   constructor(private http: HttpClient ,private myservice: MyserviceService) { }

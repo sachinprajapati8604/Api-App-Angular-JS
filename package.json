@@ -21,6 +21,7 @@
     "angular-bootstrap": "^0.12.2",
     "bootstrap": "^5.1.2",
     "jquery": "^3.6.0",
+    "ng2-search-filter": "^0.5.1",
     "primeicons": "^4.1.0",
     "primeng": "^12.2.1",
     "rxjs": "~6.6.0",

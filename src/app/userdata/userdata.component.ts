@@ -8,7 +8,7 @@ import { MyserviceService } from '../myservice.service';
   styleUrls: ['./userdata.component.css']
 })
 export class UserdataComponent implements OnInit {
-
+  searchKey="";
   userData:any;
   showLoader=true;
   

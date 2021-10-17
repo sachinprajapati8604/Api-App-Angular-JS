@@ -8,7 +8,7 @@ import { MyserviceService } from '../myservice.service';
   styleUrls: ['./userpost.component.css']
 })
 export class UserpostComponent implements OnInit {
-
+  searchKey="";
   userPostData:any;
   showLoader=true;
 

@@ -3,8 +3,11 @@
 <div class="container my-4" #elseBlock>
     <h2 class="text-center heading my-4" > User Post</h2>
     <hr>
+    <div class="mb-3" style="max-width: 25rem;">
+        <input class="form-control me-2" type="search" name="" placeholder="search..." id="" [(ngModel)]="searchKey">
+    </div>
     <div class="row  row-cols-1 row-cols-md-3 g-4">
-        <div class="col" *ngFor="let data of userPostData">
+        <div class="col" *ngFor="let data of userPostData | filter:searchKey">
             <div class="card h-100">
                 <div class="card-body">
                     <h5 class="card-title">{{data.title}}</h5>

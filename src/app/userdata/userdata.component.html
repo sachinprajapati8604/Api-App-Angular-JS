@@ -1,35 +1,38 @@
 <app-loader *ngIf="showLoader;elseBlock"></app-loader>
 
 <div class="container my-4" #elseBlock>
-    <h2 class="text-center heading my-4" > User Data</h2>
-    <hr>
-    <div class="table-responsive">
-        <table class="table table-striped">
-            <thead>
-              <tr>
-                <th scope="col">ID</th>
-                <th scope="col">Name</th>
-                <th scope="col">User Name</th>
-                <th scope="col">Email</th>
-                <th scope="col">Mobile</th>
-                <th scope="col">Address</th>
-                <th scope="col">Website</th>
-                <th scope="col">Company</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr *ngFor="let data of userData"> 
-                  <th scope="row">{{data.id}}</th>
-                  <td>{{data.name}}</td>
-                  <td>{{data.username}}</td>
-                  <td>{{data.email}}</td>
-                  <td>{{data.phone}}</td>
-                  <td>{{data.address.street}}, {{data.address.city}}, {{data.address.zipcode}}</td>
-                  <td> <a href="{{data.website}}" target="_blank">{{data.website}}</a></td>
-                <td>{{data.company.name}}</td>
-              </tr>
-             
-            </tbody>
-          </table>
-    </div>
+  <h2 class="text-center heading my-4"> User Data</h2>
+  <hr>
+  <div class="mb-3" style="max-width: 25rem;">
+    <input class="form-control me-2" type="search" name="" placeholder="search..." id="" [(ngModel)]="searchKey">
+  </div>
+  <div class="table-responsive">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th scope="col">ID</th>
+          <th scope="col">Name</th>
+          <th scope="col">User Name</th>
+          <th scope="col">Email</th>
+          <th scope="col">Mobile</th>
+          <th scope="col">Address</th>
+          <th scope="col">Website</th>
+          <th scope="col">Company</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let data of userData | filter:searchKey;">
+          <th scope="row">{{data.id}}</th>
+          <td>{{data.name}}</td>
+          <td>{{data.username}}</td>
+          <td>{{data.email}}</td>
+          <td>{{data.phone}}</td>
+          <td>{{data.address.street}}, {{data.address.city}}, {{data.address.zipcode}}</td>
+          <td> <a href="{{data.website}}" target="_blank">{{data.website}}</a></td>
+          <td>{{data.company.name}}</td>
+        </tr>
+
+      </tbody>
+    </table>
+  </div>
 </div>

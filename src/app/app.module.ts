@@ -12,6 +12,8 @@ import { HttpClientModule } from '@angular/common/http';
 import {CardModule} from 'primeng/card';
 import {ProgressSpinnerModule} from 'primeng/progressspinner';
 import { LoaderComponent } from './loader/loader.component';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -30,6 +32,8 @@ import { LoaderComponent } from './loader/loader.component';
     HttpClientModule,
     CardModule,
     ProgressSpinnerModule,
+    Ng2SearchPipeModule,
+    FormsModule,
     
   ],
   providers: [],
