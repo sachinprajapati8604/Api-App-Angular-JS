@@ -1,0 +1,16 @@
+<app-loader *ngIf="showLoader;elseBlock"></app-loader>
+
+<div class="container my-4" #elseBlock>
+    <h2 class="text-center heading my-4" > User Post</h2>
+    <hr>
+    <div class="row  row-cols-1 row-cols-md-3 g-4">
+        <div class="col" *ngFor="let data of userPostData">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h5 class="card-title">{{data.title}}</h5>
+                    <p class="card-text">{{data.body}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

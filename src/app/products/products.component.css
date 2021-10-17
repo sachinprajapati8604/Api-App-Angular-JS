@@ -1,0 +1,21 @@
+
+.card .card-title{
+    font-size: 1rem;
+}
+
+.card .brand{
+    color: rgb(66,62,66);
+}
+
+.prod-price{
+    display: flex;
+    justify-content: space-between;
+}
+
+.discount{
+    color: green;
+}
+
+.mrp{
+    text-decoration: line-through;
+}

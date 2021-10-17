@@ -1,16 +1,36 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { HeaderComponent } from './header/header.component';
+import { ProductsComponent } from './products/products.component';
+import { UserdataComponent } from './userdata/userdata.component';
+import { UserpostComponent } from './userpost/userpost.component';
+import { PhotoGalleryComponent } from './photo-gallery/photo-gallery.component';
+import { HttpClientModule } from '@angular/common/http';
+import {CardModule} from 'primeng/card';
+import {ProgressSpinnerModule} from 'primeng/progressspinner';
+import { LoaderComponent } from './loader/loader.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HeaderComponent,
+    ProductsComponent,
+    UserdataComponent,
+    UserpostComponent,
+    PhotoGalleryComponent,
+    LoaderComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    BrowserAnimationsModule,
+    AppRoutingModule,
+    HttpClientModule,
+    CardModule,
+    ProgressSpinnerModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

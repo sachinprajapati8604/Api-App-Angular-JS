@@ -1,0 +1,15 @@
+<app-loader *ngIf="showLoader;elseBlock"></app-loader>
+
+<div class="container my-4" #elseBlock>
+    <h2 class="text-center heading my-4" >Photo Gallery</h2>
+    <hr>
+    <div class="row  row-cols-1 row-cols-md-3 g-4">
+        <div class="col" *ngFor="let data of photoData">
+            <div class="card h-100">
+                <div>
+                    <img src="{{data.url}}" class="rounded" alt="img not found" width="100%" >
+                </div>            
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,21 @@
+<app-loader *ngIf="showLoader;elseBlock"></app-loader>
+
+<div class="container my-4" #elseBlock>
+    <h2 class="text-center heading my-4" >Our Products</h2> <hr>
+    <div class="row  row-cols-1 row-cols-md-4 g-4">
+        <div class="col" *ngFor="let data of productData">
+            <div class="card h-100">
+                <img [src]="data.searchImage" class="card-img-top prod-img" alt="img not found">
+                <div class="card-body">
+                    <p class="mb-1 brand"> {{data.brand}}</p>
+                    <h5 class="card-title">{{data.product}}</h5>
+                    <div class="prod-price">
+                        <p class="">{{data.price | currency: "INR":true}}</p>
+                        <p class="mrp">{{data.mrp | currency: "INR":true}}</p>
+                        <p class="discount">{{data.discountDisplayLabel}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
