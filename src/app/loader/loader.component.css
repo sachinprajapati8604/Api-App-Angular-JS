@@ -1,31 +1,38 @@
-.p-progress-spinner-svg {
-    animation: p-progress-spinner-rotate 2s linear infinite;
-    height: 100%;
-    transform-origin: center center;
-    width: 100%;
-    position: absolute;
-    top: 50%; 
-    bottom: 0;
-    left: 50%;
-    right: 0;
-    margin: auto;
-
+.overlay {
+  position: fixed;
+  display: block;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(154, 154, 154, 0.56);
+  z-index: 100000;
+  opacity: 1 !important;
+}
+.loader {
+  width: 50px;
+  height: 50px;
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
 }
 
 
+
 @keyframes p-progress-spinner-color {
-    100%,
-    0% {
-        stroke: #d62d20;
-    }
-    40% {
-        stroke: #0057e7;
-    }
-    66% {
-        stroke: #008744;
-    }
-    80%,
-    90% {
-        stroke: #ffa700;
-    }
+  100%,
+  0% {
+    stroke: #d62d20;
+  }
+  40% {
+    stroke: #0057e7;
+  }
+  66% {
+    stroke: #008744;
+  }
+  80%,
+  90% {
+    stroke: #ffa700;
+  }
 }
