@@ -7,7 +7,7 @@
         <input class="form-control me-2" type="search" name="" placeholder="search..." id="" [(ngModel)]="searchKey">
     </div>
     <div class="row  row-cols-1 row-cols-md-3 g-4">
-        <div class="col" *ngFor="let data of userPostData | filter:searchKey">
+        <div class="col" *ngFor="let data of userPostData | filter:searchKey |  paginate: { itemsPerPage: 15, currentPage: page, totalItems:totalLength}">
             <div class="card h-100">
                 <div class="card-body">
                     <h5 class="card-title">{{data.title}}</h5>
@@ -16,4 +16,5 @@
             </div>
         </div>
     </div>
+    <pagination-controls class="my-pagination" (pageChange)="page = $event"></pagination-controls>
 </div>

@@ -11,6 +11,7 @@ export class MyserviceService {
   photo_url=environment.api_url+'photos';
   userdata_url=environment.api_url+'users';
 
+
   constructor(private http:HttpClient) { }
 
   getData(arg:string){

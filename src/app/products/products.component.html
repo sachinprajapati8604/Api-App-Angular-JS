@@ -9,7 +9,7 @@
             <input class="form-control me-2" type="search" name="" placeholder="search..." id="" [(ngModel)]="searchKey">
         </div>
     <div class="row  row-cols-1 row-cols-md-4 g-4">
-        <div class="col" *ngFor="let data of productData | filter:searchKey;">
+        <div class="col" *ngFor="let data of productData | filter:searchKey |  paginate: { itemsPerPage: 20, currentPage: page, totalItems:totalLength}">
             <div class="card h-100">
                 <img [src]="data.searchImage" class="card-img-top prod-img" alt="img not found">
                 <div class="card-body">
@@ -24,4 +24,6 @@
             </div>
         </div>
     </div>
+    <pagination-controls class="my-pagination" (pageChange)="page = $event"></pagination-controls>
+
 </div>

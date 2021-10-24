@@ -1,16 +1,22 @@
 /* You can add global styles to this file, and also import other style files */
-
-.heading{
-    background-color: dodgerblue;
-    color: #fff;
-    padding: 20px;
-    width: fit-content;
-    text-align: center;
-    margin: auto;
-    border-radius: 8px 5px;
+body {
+  background: url('assets/img/bg.jpg');
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
-.card:hover{
-    transform: translateY(-3px);
-    box-shadow: 0 4px 17px rgb(0 0 0/35%);
-    cursor: pointer;
+
+.heading {
+  background-color: dodgerblue;
+  color: #fff;
+  padding: 20px;
+  width: fit-content;
+  text-align: center;
+  margin: auto;
+  border-radius: 8px 5px;
+}
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 17px rgb(0 0 0/35%);
+  cursor: pointer;
 }

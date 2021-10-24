@@ -11,6 +11,8 @@ export class UserpostComponent implements OnInit {
   searchKey="";
   userPostData:any;
   showLoader=true;
+  page:number=1;
+  totalLength:any;
 
   constructor(private http:HttpClient, private myservice:MyserviceService) { }
 
@@ -18,6 +20,8 @@ export class UserpostComponent implements OnInit {
     this.myservice.getData('posts').subscribe((data)=>{
       this.showLoader=false;
       this.userPostData=data;
+      this.totalLength=this.userPostData.length;
+      // console.log(this.totalLength);
     })
   }
 

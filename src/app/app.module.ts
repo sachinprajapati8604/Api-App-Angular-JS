@@ -14,6 +14,7 @@ import {ProgressSpinnerModule} from 'primeng/progressspinner';
 import { LoaderComponent } from './loader/loader.component';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { FormsModule } from '@angular/forms';
+import {NgxPaginationModule} from 'ngx-pagination';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,7 @@ import { FormsModule } from '@angular/forms';
     ProgressSpinnerModule,
     Ng2SearchPipeModule,
     FormsModule,
-    
+    NgxPaginationModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
