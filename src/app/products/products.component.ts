@@ -20,7 +20,7 @@ export class ProductsComponent implements OnInit {
 
   ngOnInit(): void {
     this.api_url=environment.api_prod_url;
-    this.myservice.getProducts("products").subscribe((data:any)=>{
+    this.myservice. getProductData("products").subscribe((data:any)=>{
       this.showLoader=false
       // console.log(data);
       this.totalLength=data.length;
