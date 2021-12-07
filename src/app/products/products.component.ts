@@ -9,7 +9,8 @@ import { MyserviceService } from '../myservice.service';
   styleUrls: ['./products.component.css']
 })
 export class ProductsComponent implements OnInit {
-
+  
+  searchKey="";
   prod:any;
   api_url:String ='';
   showLoader=true;
