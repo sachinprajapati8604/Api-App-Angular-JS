@@ -10,7 +10,7 @@
         </div>
   <div class="row row-cols-1 row-cols-md-4 g-4">
     <div class="col"
-      *ngFor="let item of prod | paginate: { itemsPerPage: 20, currentPage: page, totalItems:totalLength } ">
+      *ngFor="let item of prod | paginate: { itemsPerPage: 20, currentPage: page, totalItems:totalLength } | filter:searchKey;" ">
       <div class="card h-100">     
       <img [src]="item.image" class="card-img-top prod-img" alt="img not found" height="300px"/>
         <div class="card-body">
