@@ -4,6 +4,10 @@
 
 <div class="container my-4">
   <h1 class="text-center my-4 heading">Our Products</h1>
+  <hr>
+        <div class="mb-3" style="max-width: 25rem;">
+            <input class="form-control me-2" type="search" name="" placeholder="search..." id="" [(ngModel)]="searchKey">
+        </div>
   <div class="row row-cols-1 row-cols-md-4 g-4">
     <div class="col"
       *ngFor="let item of prod | paginate: { itemsPerPage: 20, currentPage: page, totalItems:totalLength } ">
